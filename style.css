@@ -1,0 +1,692 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 76%;
+  margin: 0 auto;
+  max-width: 1460px;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 30px;
+  -webkit-box-shadow: 50px 50px 99px rgba(34, 34, 34, 0.06);
+          box-shadow: 50px 50px 99px rgba(34, 34, 34, 0.06);
+}
+
+.orange-btn {
+  background-color: #f46632;
+  padding: 19px 119px;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+  border-radius: 16px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.general-h2 {
+  font-size: 32px;
+  line-height: 43px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.general-h2::after {
+  content: "About";
+  position: absolute;
+  font-size: 120px;
+  line-height: 159px;
+  bottom: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  z-index: -1;
+  opacity: 0.05;
+  font-weight: bold;
+}
+
+/* Header styles */
+header {
+  height: 780px;
+  background-color: #000;
+}
+
+header .container {
+  position: relative;
+}
+
+header nav {
+  padding: 50px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .nav-links ul li {
+  margin-left: 74px;
+}
+
+header nav .nav-links ul li a {
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+header nav > a {
+  color: #fff;
+  padding: 10px 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 31px;
+  font-size: 19px;
+  text-decoration: none;
+}
+
+header .product-design-course {
+  position: absolute;
+  padding: 109px 135px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .product-design-course h1 {
+  font-size: 50px;
+  line-height: 67px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+header .product-design-course h2 {
+  font-size: 38px;
+  line-height: 51px;
+  color: #8d8d8d;
+  margin-bottom: 101px;
+  position: relative;
+  z-index: 1;
+}
+
+header .product-design-course h2::after {
+  position: absolute;
+  content: "";
+  background-image: url("img/Group 304@2x.png");
+  width: 550px;
+  height: 125px;
+  top: -12px;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.04;
+}
+
+header .product-design-course p {
+  font-size: 23px;
+  line-height: 55px;
+  margin-bottom: 89px;
+}
+
+header .product-design-course .product-design-course-img {
+  margin-left: 98px;
+}
+
+main .bg-gray {
+  background-color: #fafafa;
+  padding-top: 457px;
+  height: 1535px;
+}
+
+main .bg-gray .container {
+  position: relative;
+}
+
+main .bg-gray .product-factory {
+  padding: 74px 121px;
+  margin-bottom: 123px;
+  position: relative;
+}
+
+main .bg-gray .product-factory .product-factory-intro > img {
+  position: absolute;
+  top: -172px;
+  left: 121px;
+}
+
+main .bg-gray .product-factory .product-factory-intro .product-factory-intro-content {
+  width: 30%;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .bg-gray .product-factory .product-factory-intro .product-factory-intro-content .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .bg-gray .product-factory .product-factory-intro .product-factory-intro-content .social-icons a:not(:last-child) img {
+  margin-bottom: 33.9px;
+}
+
+main .bg-gray .product-factory .product-factory-intro p {
+  margin-top: 77px;
+  font-size: 19px;
+  line-height: 50px;
+}
+
+main .bg-gray .course-experience {
+  padding: 74px 121px;
+  position: relative;
+}
+
+main .bg-gray .course-experience h2 {
+  text-align: center;
+}
+
+main .bg-gray .course-experience h2::after {
+  content: "Experience";
+}
+
+main .bg-gray .course-experience ul {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 105px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .bg-gray .course-experience ul li {
+  width: 33.3%;
+}
+
+main .bg-gray .course-experience ul li button {
+  width: 100%;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 17px 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .bg-gray .course-experience ul li button:active, main .bg-gray .course-experience ul li button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+main .bg-gray .course-experience ul li:first-child button {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+main .bg-gray .course-experience ul li:nth-child(2) button {
+  border-right: none;
+  border-left: none;
+}
+
+main .bg-gray .course-experience ul li:last-child button {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+main .bg-gray .course-experience .experience-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 81px;
+}
+
+main .bg-gray .course-experience .experience-content p {
+  margin-left: 78.4px;
+  color: #000;
+  font-size: 20px;
+  line-height: 48px;
+}
+
+main .sessions {
+  margin-top: 510.5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main .sessions > h2 {
+  text-align: center;
+}
+
+main .sessions > h2::after {
+  content: "Sessions";
+}
+
+main .sessions .sessions-clients {
+  margin-top: 137px;
+}
+
+main .sessions .sessions-clients .client-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 28px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  margin-left: 20px;
+  position: relative;
+}
+
+main .sessions .sessions-clients .client-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 0;
+  border: 6px solid #000;
+  border-radius: 12px;
+  height: 100%;
+  border-bottom: 0px;
+  border-top: 0px;
+}
+
+main .sessions .sessions-clients .client-header h3 {
+  font-size: 26px;
+  line-height: 35px;
+  font-weight: bold;
+}
+
+main .sessions .sessions-clients .client-header .session-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 375px;
+}
+
+main .sessions .sessions-clients .client-header .session-info .session-info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 129px;
+}
+
+main .sessions .sessions-clients .client-header .session-info .session-info-item img {
+  margin-right: 7px;
+}
+
+main .sessions .sessions-clients .client-header .session-info .session-info-item:last-child {
+  margin-right: 0px;
+}
+
+main .sessions .sessions-clients .session-content {
+  padding: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+main .sessions .sessions-clients .session-content::before {
+  position: absolute;
+  content: "";
+  left: 5px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #e8e8e8;
+}
+
+main .sessions .sessions-clients .session-content img {
+  width: 87px;
+  height: 87px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 25.2px;
+}
+
+main .sessions .sessions-clients .session-content .session-content-item {
+  width: 1030px;
+}
+
+main .sessions .sessions-clients .session-content .session-content-item p {
+  font-size: 16px;
+  line-height: 34px;
+}
+
+main .bg-gray-2 {
+  margin-top: 770px;
+  padding-top: 0px;
+  height: 1750px;
+}
+
+main .bg-gray-2 .container {
+  position: relative;
+  height: 100%;
+}
+
+main .bg-gray-2 .container .masters {
+  padding: 55px 73px;
+  position: absolute;
+  top: -577px;
+}
+
+main .bg-gray-2 .container .masters > h2 {
+  text-align: center;
+}
+
+main .bg-gray-2 .container .masters > h2::after {
+  content: "Masters";
+}
+
+main .bg-gray-2 .container .masters .masters-items {
+  margin-top: 89px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 75px;
+}
+
+main .bg-gray-2 .container .masters .masters-items .master-item img {
+  width: 100%;
+}
+
+main .bg-gray-2 .container .masters .masters-items .master-item h2 {
+  font-size: 20px;
+  line-height: 35px;
+  margin-top: 28px;
+  margin-bottom: 15px;
+}
+
+main .bg-gray-2 .container .masters .masters-items .master-item p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+main .bg-gray-2 .container .faq {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-top: 569px;
+  background-color: transparent;
+}
+
+main .bg-gray-2 .container .faq > h2 {
+  text-align: center;
+}
+
+main .bg-gray-2 .container .faq > h2::after {
+  content: "FAQ";
+}
+
+main .bg-gray-2 .container .faq button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 35px;
+  background-color: #fff;
+  -webkit-box-shadow: 10px 10px 99px rgba(211, 211, 211, 0.16);
+          box-shadow: 10px 10px 99px rgba(211, 211, 211, 0.16);
+  outline: none;
+  border-radius: 26px;
+  border: none;
+  padding: 28px 60px;
+  font-size: 21px;
+  line-height: 33px;
+}
+
+main .bg-gray-2 .container .faq button:first-child {
+  margin-top: 100px;
+}
+
+main .bg-gray-2 .container .faq button .content {
+  display: none;
+}
+
+main .bg-gray-2 .container .course-fee {
+  padding: 55px 73px;
+  width: 100%;
+  position: absolute;
+  bottom: -459px;
+}
+
+main .bg-gray-2 .container .course-fee > h2 {
+  text-align: center;
+}
+
+main .bg-gray-2 .container .course-fee > h2::after {
+  content: "Course fee";
+}
+
+main .bg-gray-2 .container .course-fee > p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  opacity: 0.49;
+  margin-top: 30px;
+}
+
+main .bg-gray-2 .container .course-fee .course-fee-info {
+  margin-top: 94px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+main .bg-gray-2 .container .course-fee .course-fee-info .course-fee-content h3 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 53px;
+}
+
+main .bg-gray-2 .container .course-fee .course-fee-info .course-fee-content ul {
+  list-style: none;
+}
+
+main .bg-gray-2 .container .course-fee .course-fee-info .course-fee-content ul li {
+  background-image: url("img/Group 624.png");
+  background-size: 19px 19px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  margin-bottom: 51px;
+}
+
+main .bg-gray-2 .container .course-fee .course-fee-info .course-fee-image {
+  margin-left: 69px;
+  background-color: #000;
+  color: #fff;
+  padding: 47px 73px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 345px;
+  border-radius: 25px;
+}
+
+main .bg-gray-2 .container .course-fee .course-fee-info .course-fee-image h5 {
+  font-size: 25px;
+  text-decoration: line-through;
+  margin-bottom: 24px;
+}
+
+main .bg-gray-2 .container .course-fee .course-fee-info .course-fee-image h4 {
+  font-size: 34px;
+  margin-bottom: 36px;
+}
+
+main .bg-gray-2 .container .course-fee .course-fee-info .course-fee-image p {
+  font-size: 18px;
+  margin-bottom: 38px;
+}
+
+main .request-headings {
+  margin-top: 526px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0px;
+  padding: 129px 230px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .request-headings .headings-content {
+  padding: 129px 0px;
+  width: 50%;
+}
+
+main .request-headings .headings-content h3 {
+  font-size: 34px;
+  line-height: 46px;
+  margin-bottom: 32px;
+  font-weight: bold;
+}
+
+main .request-headings .headings-content p {
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+main .request-headings .headings-content input {
+  width: 80%;
+  padding: 15px 0px 17px 35px;
+  border-radius: 16px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  outline: none;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 58px;
+}
+
+main .request-headings .headings-content input::-webkit-input-placeholder {
+  font-size: 22px;
+  color: #fff;
+}
+
+main .request-headings .headings-content input:-ms-input-placeholder {
+  font-size: 22px;
+  color: #fff;
+}
+
+main .request-headings .headings-content input::-ms-input-placeholder {
+  font-size: 22px;
+  color: #fff;
+}
+
+main .request-headings .headings-content input::placeholder {
+  font-size: 22px;
+  color: #fff;
+}
+
+main .request-headings .headings-content .success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .request-headings .headings-content .success span {
+  font-size: 20px;
+  color: #acacac;
+}
+
+main .request-headings .headings-image {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("img/Union 3.png");
+  background-size: cover;
+}
+/*# sourceMappingURL=style.css.map */
