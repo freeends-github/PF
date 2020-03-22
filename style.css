@@ -264,6 +264,11 @@ main .bg-gray .course-experience ul li button:active, main .bg-gray .course-expe
   color: #fff;
 }
 
+main .bg-gray .course-experience ul li button.active {
+  background-color: #000;
+  color: #fff;
+}
+
 main .bg-gray .course-experience ul li:first-child button {
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
@@ -280,9 +285,7 @@ main .bg-gray .course-experience ul li:last-child button {
 }
 
 main .bg-gray .course-experience .experience-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -290,6 +293,8 @@ main .bg-gray .course-experience .experience-content {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 81px;
+  -webkit-animation: experience 1s;
+          animation: experience 1s;
 }
 
 main .bg-gray .course-experience .experience-content p {
@@ -297,6 +302,30 @@ main .bg-gray .course-experience .experience-content p {
   color: #000;
   font-size: 20px;
   line-height: 48px;
+}
+
+main .bg-gray .course-experience .experience-content.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@-webkit-keyframes experience {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes experience {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 main .sessions {
@@ -436,6 +465,58 @@ main .bg-gray-2 .container .masters {
   top: -577px;
 }
 
+main .bg-gray-2 .container .masters .master-item-container > img {
+  width: 200px;
+}
+
+main .bg-gray-2 .container .masters .master-item-container {
+  position: relative;
+}
+
+main .bg-gray-2 .container .masters .master-item-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 96%;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .bg-gray-2 .container .masters .master-item-hover img {
+  height: 17%;
+  width: 20% !important;
+  margin-top: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+main .bg-gray-2 .container .masters .master-item-hover .about-master {
+  text-decoration: none;
+  color: white;
+  font-size: 8px;
+  font-weight: bold;
+  background: rgba(180, 180, 180, 0.48);
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 4px;
+}
+
+main .bg-gray-2 .container .masters .master-item-hover .vijat {
+  height: 10px;
+  width: 5px;
+  margin-left: 0;
+  padding-top: 3px;
+}
+
+main .bg-gray-2 .container .masters .master-item:hover .master-item-hover {
+  display: inline;
+}
+
 main .bg-gray-2 .container .masters > h2 {
   text-align: center;
 }
@@ -448,58 +529,13 @@ main .bg-gray-2 .container .masters .masters-items {
   margin-top: 89px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr);
+  -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
   grid-gap: 75px;
 }
 
 main .bg-gray-2 .container .masters .masters-items .master-item img {
   width: 100%;
-}
-.master-item-container>img{
-  width: 200px;
-}
-.master-item-container{
-  position: relative;
-}
-.master-item-hover{
-  position:absolute;
-  top: 0;
-  right: 0;
-  background: rgba(0,0,0,0.7);
-  width: 100%;
-  height: 96%;
-  border-radius: 10px;
-  text-align: center;
-  display: none;
-  transition: all 0.3s ease-in-out;
-
-}
-.master-item-hover img{
-  height: 17%;
-  width: 20% !important;
-  margin-top: 20px;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-.master-item-hover .about-master{
-  text-decoration: none;
-  color: white;
-  font-size: 8px;
-  font-weight: bold;
-  background:rgba(180, 180, 180, 0.48);
-  border-radius: 5px;
-  margin-top: 15px;
-  padding: 4px;
-}
-.master-item-hover .vijat{
-  height: 10px;
-  width: 5px;
-  margin-left: 0;
-  padding-top: 3px;
-}
-.master-item:hover .master-item-hover{
-  display: inline;
 }
 
 main .bg-gray-2 .container .masters .masters-items .master-item h2 {
@@ -529,6 +565,88 @@ main .bg-gray-2 .container .faq > h2::after {
   content: "FAQ";
 }
 
+main .bg-gray-2 .container .faq .acc {
+  overflow: hidden;
+  padding: 0;
+}
+
+main .bg-gray-2 .container .faq .acc li {
+  list-style-type: none;
+  padding: 0;
+}
+
+main .bg-gray-2 .container .faq .acc li:first-child {
+  margin-top: 100px;
+}
+
+main .bg-gray-2 .container .faq .acc_ctrl {
+  background: #ffffff;
+  cursor: pointer;
+  display: block;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none !important;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+main .bg-gray-2 .container .faq .acc_ctrl:before {
+  background: #000;
+  content: "";
+  height: 2px;
+  margin-right: 37px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 24px;
+}
+
+main .bg-gray-2 .container .faq .acc_ctrl:after {
+  background: #000;
+  content: "";
+  height: 2px;
+  margin-right: 37px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 24px;
+}
+
+main .bg-gray-2 .container .faq .acc_ctrl.active:before {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+main .bg-gray-2 .container .faq .acc_ctrl.active h2,
+main .bg-gray-2 .container .faq .acc_ctrl:focus h2 {
+  position: relative;
+}
+
+main .bg-gray-2 .container .faq .acc_ctrl.active > .acc_panel {
+  opacity: 1;
+  visibility: visible;
+  padding-top: 30px;
+  display: block;
+}
+
+main .bg-gray-2 .container .faq .acc_panel {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
 main .bg-gray-2 .container .faq button {
   display: block;
   width: 100%;
@@ -543,14 +661,6 @@ main .bg-gray-2 .container .faq button {
   padding: 28px 60px;
   font-size: 21px;
   line-height: 33px;
-}
-
-main .bg-gray-2 .container .faq button:first-child {
-  margin-top: 100px;
-}
-
-main .bg-gray-2 .container .faq button .content {
-  display: none;
 }
 
 main .bg-gray-2 .container .course-fee {
@@ -733,5 +843,236 @@ main .request-headings .headings-image {
           align-items: center;
   background-image: url("img/Union 3.png");
   background-size: cover;
+}
+
+main .projects {
+  margin-top: 100px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: none;
+}
+
+main .projects .container > h2 {
+  text-align: center;
+}
+
+main .projects .container > h2::after {
+  content: "Projects";
+}
+
+main .projects .container .projects-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 112px;
+}
+
+main .projects .container .design-todo {
+  width: 49%;
+}
+
+main .projects .container .design-todo h3 {
+  font-size: 38px;
+  line-height: 51px;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 31px;
+}
+
+main .projects .container .design-todo h3::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 14px);
+  left: -10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+main .projects .container .design-todo p {
+  font-size: 22px;
+  line-height: 56px;
+  margin-bottom: 67px;
+}
+
+main .projects .container .design-todo ul {
+  list-style: none;
+}
+
+main .projects .container .design-todo ul li {
+  background-image: url("img/Group 624.png");
+  background-size: 19px 19px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+main .schedule {
+  margin-top: 143px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: none;
+  padding: 105px 0px;
+}
+
+main .schedule.bg-gray {
+  height: unset;
+}
+
+main .schedule .container > h2 {
+  text-align: center;
+}
+
+main .schedule .container > h2::after {
+  content: "Schedule";
+}
+
+main .schedule .container .start-end {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .schedule .container .start-end span {
+  font-size: 29px;
+  line-height: 38px;
+}
+
+main .schedule .container .start-end .line {
+  width: calc(568px - 44px);
+  height: 2px;
+  border-bottom: 2px dashed #ccc;
+  position: relative;
+}
+
+main .schedule .container .start-end .line::before {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  top: calc(50% - 11px);
+  left: -23px;
+}
+
+main .schedule .container .start-end .line::after {
+  width: 22px;
+  height: 22px;
+  background-color: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  top: calc(50% - 11px);
+  right: -23px;
+}
+
+main .schedule .container .dates {
+  margin-top: 82px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .schedule .container .dates .date {
+  width: 45%;
+  height: 160px;
+  background-color: #fff;
+  -webkit-box-shadow: 40px 40px 40px 99px rgba(172, 172, 172, 0.16);
+          box-shadow: 40px 40px 40px 99px rgba(172, 172, 172, 0.16);
+  border-radius: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .schedule .container .dates .date h2 {
+  font-size: 45px;
+  line-height: 60px;
+}
+
+main .schedule .container .sign-up {
+  margin-top: 103px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .schedule .container .sign-up .badge {
+  font-size: 33px;
+  line-height: 44px;
+  width: 63px;
+  height: 63px;
+  border-radius: 16px;
+  background-color: #000;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 35px;
+}
+
+main .schedule .container .sign-up span:not(.badge) {
+  font-size: 33px;
+  line-height: 44px;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+main footer .container {
+  padding: 115px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main footer .container .social-icons a {
+  margin-right: 40px;
+  text-decoration: none;
+}
+
+main footer .container p {
+  font-size: 20px;
+  line-height: 27px;
 }
 /*# sourceMappingURL=style.css.map */

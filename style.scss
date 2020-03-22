@@ -201,6 +201,10 @@ main {
               background-color: #000;
               color: #fff;
             }
+            &.active {
+              background-color: #000;
+              color: #fff;
+            }
           }
           &:first-child {
             button {
@@ -223,15 +227,27 @@ main {
         }
       }
       .experience-content {
-        display: flex;
+        display: none;
         justify-content: space-between;
         align-items: center;
         margin-top: 81px;
+        animation: experience 1s;
         p {
           margin-left: 78.4px;
           color: #000;
           font-size: 20px;
           line-height: 48px;
+        }
+        &.active {
+          display: flex;
+        }
+      }
+      @keyframes experience {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
         }
       }
     }
@@ -331,6 +347,50 @@ main {
         padding: 55px 73px;
         position: absolute;
         top: -577px;
+        .master-item-container > img {
+          width: 200px;
+        }
+        .master-item-container {
+          position: relative;
+        }
+        .master-item-hover {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.7);
+          width: 100%;
+          height: 96%;
+          border-radius: 10px;
+          text-align: center;
+          display: none;
+          transition: all 0.3s ease-in-out;
+        }
+        .master-item-hover img {
+          height: 17%;
+          width: 20% !important;
+          margin-top: 20px;
+          margin-left: 2px;
+          margin-right: 2px;
+        }
+        .master-item-hover .about-master {
+          text-decoration: none;
+          color: white;
+          font-size: 8px;
+          font-weight: bold;
+          background: rgba(180, 180, 180, 0.48);
+          border-radius: 5px;
+          margin-top: 15px;
+          padding: 4px;
+        }
+        .master-item-hover .vijat {
+          height: 10px;
+          width: 5px;
+          margin-left: 0;
+          padding-top: 3px;
+        }
+        .master-item:hover .master-item-hover {
+          display: inline;
+        }
         & > h2 {
           text-align: center;
           &::after {
@@ -369,6 +429,90 @@ main {
             content: "FAQ";
           }
         }
+        .acc {
+          overflow: hidden;
+          padding: 0;
+        }
+
+        .acc li {
+          list-style-type: none;
+          padding: 0;
+
+          &:first-child {
+            margin-top: 100px;
+          }
+        }
+
+        .acc_ctrl {
+          background: #ffffff;
+          cursor: pointer;
+          display: block;
+          box-shadow: none;
+          outline: none !important;
+          position: relative;
+          text-align: left;
+          width: 100%;
+        }
+
+        .acc_ctrl:before {
+          background: #000;
+          content: "";
+          height: 2px;
+          margin-right: 37px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -ms-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+          width: 24px;
+        }
+
+        .acc_ctrl:after {
+          background: #000;
+          content: "";
+          height: 2px;
+          margin-right: 37px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          width: 24px;
+        }
+
+        .acc_ctrl.active:before {
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+
+        .acc_ctrl.active h2,
+        .acc_ctrl:focus h2 {
+          position: relative;
+        }
+        .acc_ctrl.active > .acc_panel {
+          opacity: 1;
+          visibility: visible;
+          padding-top: 30px;
+          display: block;
+        }
+        .acc_panel {
+          transition: 1s ease;
+          background: #fff;
+          opacity: 0;
+          visibility: hidden;
+          display: none;
+          align-items: center;
+          overflow: hidden;
+        }
         button {
           display: block;
           width: 100%;
@@ -382,12 +526,6 @@ main {
           padding: 28px 60px;
           font-size: 21px;
           line-height: 33px;
-          &:first-child {
-            margin-top: 100px;
-          }
-          .content {
-            display: none;
-          }
         }
       }
       .course-fee {
@@ -514,6 +652,176 @@ main {
       align-items: center;
       background-image: url("img/Union\ 3.png");
       background-size: cover;
+    }
+  }
+  .projects {
+    margin-top: 100px;
+    box-shadow: none;
+    border-radius: none;
+    .container {
+      & > h2 {
+        text-align: center;
+        &::after {
+          content: "Projects";
+        }
+      }
+      .projects-items {
+        display: flex;
+        margin-top: 112px;
+      }
+      .design-todo {
+        width: 49%;
+        h3 {
+          font-size: 38px;
+          line-height: 51px;
+          position: relative;
+          padding-left: 30px;
+          margin-bottom: 31px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 14px);
+            left: -10px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #000;
+          }
+        }
+        p {
+          font-size: 22px;
+          line-height: 56px;
+          margin-bottom: 67px;
+        }
+        ul {
+          list-style: none;
+          li {
+            background-image: url("img/Group\ 624.png");
+            background-size: 19px 19px;
+            background-repeat: no-repeat;
+            padding-left: 40px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+  .schedule {
+    margin-top: 143px;
+    box-shadow: none;
+    border-radius: none;
+    padding: 105px 0px;
+    &.bg-gray {
+      height: unset;
+    }
+    .container {
+      & > h2 {
+        text-align: center;
+        &::after {
+          content: "Schedule";
+        }
+      }
+      .start-end {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          font-size: 29px;
+          line-height: 38px;
+        }
+        .line {
+          width: calc(568px - 44px);
+          height: 2px;
+          border-bottom: 2px dashed #ccc;
+          position: relative;
+          &::before {
+            width: 22px;
+            height: 22px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            position: absolute;
+            content: "";
+            top: calc(50% - 11px);
+            left: -23px;
+          }
+          &::after {
+            width: 22px;
+            height: 22px;
+            background-color: #ccc;
+            border-radius: 50%;
+            position: absolute;
+            content: "";
+            top: calc(50% - 11px);
+            right: -23px;
+          }
+        }
+      }
+      .dates {
+        margin-top: 82px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .date {
+          width: 45%;
+          height: 160px;
+          background-color: #fff;
+          box-shadow: 40px 40px 40px 99px rgba(172, 172, 172, 0.16);
+          border-radius: 26px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          h2 {
+            font-size: 45px;
+            line-height: 60px;
+          }
+        }
+      }
+      .sign-up {
+        margin-top: 103px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .badge {
+          font-size: 33px;
+          line-height: 44px;
+          width: 63px;
+          height: 63px;
+          border-radius: 16px;
+          background-color: #000;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 35px;
+        }
+        span:not(.badge) {
+          font-size: 33px;
+          line-height: 44px;
+          font-weight: bold;
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+  footer {
+    .container {
+      padding: 115px 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .social-icons {
+        a {
+          margin-right: 40px;
+          text-decoration: none;
+        }
+      }
+      p {
+        font-size: 20px;
+        line-height: 27px;
+      }
     }
   }
 }
