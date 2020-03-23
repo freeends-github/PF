@@ -860,11 +860,64 @@ main .projects .container > h2::after {
   content: "Projects";
 }
 
+main .projects .container .slick-prev,
+main .projects .container .slick-next {
+  position: absolute;
+  top: 90%;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 16px;
+  width: 70px;
+  height: 70px;
+  outline: none;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+main .projects .container .slick-prev {
+  left: 57%;
+  z-index: 2;
+}
+
+main .projects .container .slick-next {
+  left: 88%;
+}
+
 main .projects .container .projects-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 112px;
+  outline: none;
+  padding: 0px 10px;
+}
+
+main .projects .container .projects-items .projects-slider {
+  width: 50%;
+}
+
+main .projects .container .projects-items .projects-slider .images {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+main .projects .container .projects-items .projects-slider .images .image {
+  width: 100%;
+  height: 200px;
+  background-color: grey;
+}
+
+main .projects .container .projects-items .projects-slider .images .image:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40%;
+  background-color: red;
+  height: 400px;
 }
 
 main .projects .container .design-todo {
@@ -906,6 +959,22 @@ main .projects .container .design-todo ul li {
   background-repeat: no-repeat;
   padding-left: 40px;
   margin-bottom: 30px;
+}
+
+main .projects .container .design-todo .slider-nr {
+  margin-top: 102px;
+  background-color: #f5f5f5;
+  font-size: 34px;
+  width: 202px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .schedule {

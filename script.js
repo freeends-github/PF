@@ -25,4 +25,16 @@ $(document).ready(function() {
       }
     });
   });
+  // Slider functionality
+  $(".project-slider").slick();
+  $(".project-slider .slick-prev")[0].innerText = "<";
+  $(".project-slider .slick-next")[0].innerText = ">";
+  let slidesNr = $(".project-slider .slick-slide").not(".slick-cloned").length;
+  $(".slick-current").find(".slider-nr")[0].innerText = "1 / " + slidesNr;
+  $(".project-slider").on("afterChange", function(event, current, next) {
+    let slidesNr = current.slideCount;
+    let currentNr = current.currentSlide + 1;
+    $(".slick-current").find(".slider-nr")[0].innerText =
+      currentNr + " / " + slidesNr;
+  });
 });

@@ -665,9 +665,54 @@ main {
           content: "Projects";
         }
       }
+      .slick-prev,
+      .slick-next {
+        position: absolute;
+        top: 90%;
+        background-color: #fff;
+        border: 2px solid #000;
+        border-radius: 16px;
+        width: 70px;
+        height: 70px;
+        outline: none;
+        cursor: pointer;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .slick-prev {
+        left: 57%;
+        z-index: 2;
+      }
+      .slick-next {
+        left: 88%;
+      }
       .projects-items {
         display: flex;
         margin-top: 112px;
+        outline: none;
+        padding: 0px 10px;
+        .projects-slider {
+          width: 50%;
+          .images {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            .image {
+              width: 100%;
+              height: 200px;
+              background-color: grey;
+              &:last-child {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 40%;
+                background-color: red;
+                height: 400px;
+              }
+            }
+          }
+        }
       }
       .design-todo {
         width: 49%;
@@ -702,6 +747,15 @@ main {
             padding-left: 40px;
             margin-bottom: 30px;
           }
+        }
+        .slider-nr {
+          margin-top: 102px;
+          background-color: #f5f5f5;
+          font-size: 34px;
+          width: 202px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
     }
