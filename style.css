@@ -99,6 +99,28 @@ header nav .nav-links ul li a {
   text-decoration: none;
 }
 
+header nav .nav-links ul li a:after {
+  display: block;
+  content: "";
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+}
+
+header nav .nav-links ul li a:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+}
+
 header nav > a {
   color: #fff;
   padding: 10px 40px;
@@ -826,7 +848,8 @@ main .request-headings .headings-content .success {
 }
 
 main .request-headings .headings-content .success span {
-  font-size: 20px;
+  font-size: 18px;
+  margin-left: 7px;
   color: #acacac;
 }
 
@@ -876,11 +899,19 @@ main .projects .container .slick-next {
 }
 
 main .projects .container .slick-prev {
+  background-image: url("./img/Path 490.png");
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
   left: 57%;
   z-index: 2;
 }
 
 main .projects .container .slick-next {
+  background-image: url("./img/Path 489.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
   left: 88%;
 }
 
